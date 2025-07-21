@@ -1,25 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    
 }
 
 header {
-    background-image: url("/imagens/Desert.jpg");
-    background-size: cover;
-    background-position: bottom;
-    background-repeat: no-repeat;
+    background: linear-gradient(135deg, #dcae86, #c67c4e, #3f9f91);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     
-}
+} 
+
+
+
 .imgIcone {
-    height: 30px;
+    height: 40px;
+    width: 50px;
+    border: 1px solid black;
+
 }
 .imgIcone:hover {
-    transform: scale(400%);
+    transform: scale(250%);
 }
 .container {
     padding: 2% 5%;
     font-size: 0.9rem;
+    
     
 }
 .flex {
@@ -37,7 +51,8 @@ header {
     
 }
 .list li {
-    padding: 30px;
+    display: inline-block;
+    margin: 0 30px;
     
     
 }
@@ -48,7 +63,8 @@ header {
 .list a {
     text-decoration: none;
     font-size: 1.2rem;
-    color: black;
+    color: #f0e1cf;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 
     
     
@@ -68,20 +84,20 @@ header {
 .text a {
     display: flex;
     font-size: 2.2rem;
-    padding-left: 19%;
+    padding-left: 25%;
     text-decoration: none;
-    color: black;
+    color: #f0e1cf;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
     letter-spacing: 5px;
 }
 .text a:hover {
     color: aqua;
-    transform: scale(150%);
-    transition: 0.4s ease 0.3s;
+    
 }
 .contact-btn {
     background: linear-gradient(90deg, #3CAEA3 0%, #70C1B3 100%);
     color: #fff !important;
-    padding: 10px 28px;
+    padding: 5px 18px;
     border-radius: 24px;
     font-weight: bold;
     box-shadow: 0 2px 8px rgba(60,174,163,0.15);
@@ -98,4 +114,24 @@ header {
     background: linear-gradient(90deg, #226F54 0%, #3CAEA3 100%);
     transform: scale(1.08);
     color: #fff;
+}
+
+.banner {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url("/imagens/Desert.jpg"); 
+    background-size: cover;
+    background-position: 100% 0;
+    background-repeat: no-repeat;
+}
+
+.banner h1 {
+    font-size: 3rem;
+    color: #dcae86;
+}
+.banner h1 span {
+    color: #ffffff;
 }
