@@ -12,6 +12,11 @@ html {
     height: 500vh;
 }
 
+body {
+    background: linear-gradient(135deg, #f4e2d8 0%, #e6d3b3 60%, #b8e0d2 100%);
+    min-height: 100vh;
+}
+
 header {
     background: linear-gradient(135deg, #dcae86, #c67c4e, #3f9f91);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
@@ -153,3 +158,74 @@ header.roll a {
 .banner h1 span {
     color: #ffffff;
 }
+
+.about-us {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 80%;
+    margin: 40px auto 0 auto;
+    background: linear-gradient(115deg, #e6d3b3 60%, #b8e0d2 100%);
+    border-radius: 24px;
+    box-shadow: 0 4px 24px rgba(60, 174, 163, 0.10);
+    padding: 40px 40px; /* aumente o padding lateral */
+    gap: 40px;
+    transition: background 0.5s;
+}
+
+.containerAbout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 32px;
+    max-width: 500px;
+}
+
+.containerAbout h1 {
+    font-size: 2.5rem;
+    color: #226F54;
+    margin-bottom: 18px;
+    letter-spacing: 2px;
+}
+
+.containerAbout p {
+    font-size: 1.1rem;
+    color: #3f3f3f;
+    line-height: 1.7;
+}
+
+.imageAbout {
+    padding-right: 24px; /* espaço extra à direita da imagem */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imageAbout img {
+    width: 260px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 2px 16px rgba(60, 174, 163, 0.13);
+    border: 4px solid #fff;
+    background: #f4e2d8;
+    margin-left: 16px; /* afasta da borda esquerda */
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+    .about-us {
+        flex-direction: column;
+        padding: 24px 0;
+        gap: 24px;
+    }
+    .imageAbout img {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+#about {
+    scroll-margin-top: 100px; /* ajuste conforme a altura da sua header */
+}
+
