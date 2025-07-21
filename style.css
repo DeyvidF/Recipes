@@ -8,6 +8,9 @@
     font-optical-sizing: auto;
     
 }
+html {
+    height: 500vh;
+}
 
 header {
     background: linear-gradient(135deg, #dcae86, #c67c4e, #3f9f91);
@@ -16,8 +19,23 @@ header {
     top: 0;
     left: 0;
     width: 100%;
+    padding: 2% 5%;
+    transition: 1s;
     
 } 
+
+header.roll {
+    background:#fff !important;
+    
+    padding:0.5% 4.6%;
+    
+    
+}
+header.roll a {
+    color: #e39836;
+    
+}
+
 
 
 
@@ -31,7 +49,7 @@ header {
     transform: scale(250%);
 }
 .container {
-    padding: 2% 5%;
+
     font-size: 0.9rem;
     
     
