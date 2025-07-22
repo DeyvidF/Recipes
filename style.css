@@ -8,9 +8,7 @@
     font-optical-sizing: auto;
     
 }
-html {
-    height: 500vh;
-}
+
 
 body {
     background: linear-gradient(135deg, #f4e2d8 0%, #e6d3b3 60%, #b8e0d2 100%);
@@ -40,9 +38,23 @@ header.roll a {
     color: #e39836;
     
 }
+header.roll .socialMedias li {
+    color:rgb(14, 191, 14);
+}
 
 
-
+.socialMedias {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    list-style-type: none;
+}
+.socialMedias li {
+    display: flex;
+    padding-left:15px;
+    color:rgb(51, 244, 51)
+}
 
 .imgIcone {
     height: 40px;
@@ -227,5 +239,32 @@ header.roll a {
 
 #about {
     scroll-margin-top: 100px; /* ajuste conforme a altura da sua header */
+}
+
+.containerTips {
+    background-image: url(/imagens/table.jpg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    margin-top: 100px;
+    position: relative;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.containerTips::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.371);
+    z-index: 1;
+
+}
+.tip1, .tip2, .tip3{
+    border: 3px solid white;
+    height: 80vh;
+    width:50vh
 }
 
