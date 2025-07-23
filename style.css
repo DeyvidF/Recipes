@@ -24,8 +24,10 @@ header {
     width: 100%;
     padding: 2% 5%;
     transition: 1s;
+    z-index: 999;
     
 } 
+
 
 header.roll {
     background:#fff !important;
@@ -171,18 +173,36 @@ header.roll .socialMedias li {
     color: #ffffff;
 }
 
+.about-us,
+.containerTips {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto 0 auto;
+    border-radius: 24px;
+    box-shadow: 0 4px 24px rgba(60, 174, 163, 0.10);
+    /* Mantém o mesmo padrão de sombra e borda */
+}
+
 .about-us {
+    background: linear-gradient(115deg, #e6d3b3 60%, #b8e0d2 100%);
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 80%;
-    margin: 40px auto 0 auto;
-    background: linear-gradient(115deg, #e6d3b3 60%, #b8e0d2 100%);
-    border-radius: 24px;
-    box-shadow: 0 4px 24px rgba(60, 174, 163, 0.10);
-    padding: 40px 40px; /* aumente o padding lateral */
     gap: 40px;
+    padding: 48px 0;
     transition: background 0.5s;
+}
+
+.containerTips {
+    background: linear-gradient(120deg, #e6d3b3 60%, #b8e0d2 100%);
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    align-items: stretch;
+    padding: 48px 0;
+    position: relative;
+    z-index: 2;
+    margin-top: 40px;
 }
 
 .containerAbout {
@@ -226,10 +246,12 @@ header.roll .socialMedias li {
 
 /* Responsivo */
 @media (max-width: 900px) {
-    .about-us {
+    .about-us,
+    .containerTips {
         flex-direction: column;
         padding: 24px 0;
         gap: 24px;
+        width: 98%;
     }
     .imageAbout img {
         width: 180px;
@@ -242,29 +264,105 @@ header.roll .socialMedias li {
 }
 
 .containerTips {
-    background-image: url(/imagens/table.jpg);
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    margin-top: 100px;
+    width: 90%;
+    margin: 80px auto 0 auto;
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    align-items: stretch;
+    background: linear-gradient(120deg, #e6d3b3 60%, #b8e0d2 100%);
+    border-radius: 24px;
+    box-shadow: 0 4px 24px rgba(60, 174, 163, 0.10);
+    padding: 48px 0;
     position: relative;
-    display:flex;
+    z-index: 2;
+    
+}
+
+.tipCard {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 16px rgba(60, 174, 163, 0.13);
+    padding: 32px 24px 28px 24px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    width: 320px;
+    min-height: 480px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 2px solid #f4e2d8;
 }
 
-.containerTips::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0, 0, 0, 0.371);
-    z-index: 1;
 
+
+.tipImg {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 18px;
+    border: 4px solid #b8e0d2;
+    background: #f4e2d8;
 }
-.tip1, .tip2, .tip3{
-    border: 3px solid white;
-    height: 80vh;
-    width:50vh
+
+.tipCard h2 {
+    font-size: 1.4rem;
+    color: #226F54;
+    margin-bottom: 12px;
+    text-align: center;
+    letter-spacing: 1px;
 }
+
+.tipCard p {
+    font-size: 1.05rem;
+    color: #3f3f3f;
+    line-height: 1.6;
+    margin-bottom: 22px;
+    text-align: center;
+}
+
+.tipBtn {
+    background: linear-gradient(90deg, #3CAEA3 0%, #70C1B3 100%);
+    color: #fff;
+    padding: 10px 28px;
+    border-radius: 24px;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(60,174,163,0.15);
+    border: none;
+    font-size: 1.1rem;
+    text-shadow: 0 1px 2px #226F54;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.3s;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.tipBtn:hover {
+    background: linear-gradient(90deg, #226F54 0%, #3CAEA3 100%);
+    transform: scale(1.08);
+    color: #fff;
+}
+
+
+
+@media (max-width: 700px) {
+    .containerTips {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        padding: 24px 0;
+    }
+    .tipCard {
+        width: 95%;
+        min-width: unset;
+        margin-bottom: 0;
+        padding: 24px 10px 20px 10px;
+    }
+    .tipImg {
+        width: 90px;
+        height: 90px;
+        margin-bottom: 12px;
+    }
+}
+
 
